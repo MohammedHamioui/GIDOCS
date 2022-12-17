@@ -37,6 +37,7 @@ namespace GIDOCS
 
                 if ((Title != null) && (Genre != null) && (Developer != null) && (Publisher != null)) {
                     context.VideoGames.Add(new Games() { Title = Title, Genre = Genre, Developer = Developer, Publisher = Publisher });
+                    MessageBox.Show("Game added!");
                     context.SaveChanges();
                 }
             }
@@ -69,7 +70,7 @@ namespace GIDOCS
                     game.Genre = Genre;
                     game.Developer = Developer;
                     game.Publisher = Publisher;
-
+                    MessageBox.Show("Game succesfully updated!");
                     context.SaveChanges();
                 }
             }
@@ -83,8 +84,8 @@ namespace GIDOCS
                 if (selectedGame != null)
                 {
                     Games game = context.VideoGames.Single(x=> x.Id == selectedGame.Id);
-
                     context.Remove(game);
+                    MessageBox.Show("Game succesfully deleted!");
                     context.SaveChanges();
                 }
             }
