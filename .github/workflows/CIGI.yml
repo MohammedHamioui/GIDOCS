@@ -28,6 +28,7 @@ jobs:
     - name: Publish
       run: |
         dotnet publish -o publish/ -r win-x64 -c Release --self-contained /p:PublishSingleFile=true
+        mv './publish/GIDOCS.exe' ./publish/MathQuizzer.exe
         
     - name: Upload artifact - Windows
       uses: actions/upload-artifact@v1.0.0
