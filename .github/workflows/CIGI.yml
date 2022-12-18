@@ -32,8 +32,8 @@ jobs:
     - name: Upload artifact - Windows
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: GameInventory.exe
-        path: publish/GameInventory.exe
+        name: GameInventory
+        path: publish/GameInventory
     
     #- name: Create Release
      # id: create_release
