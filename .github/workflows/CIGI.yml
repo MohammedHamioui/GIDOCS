@@ -33,7 +33,7 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         name: GameInventory
-        path: publish/GameInventory
+        path: publish/GIDOCS
     
     #- name: Create Release
      # id: create_release
