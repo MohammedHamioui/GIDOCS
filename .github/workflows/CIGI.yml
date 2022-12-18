@@ -34,7 +34,7 @@ jobs:
       with:
         name: GameInventory.exe
         path: publish/GIDOCS.exe
-        
+    
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
