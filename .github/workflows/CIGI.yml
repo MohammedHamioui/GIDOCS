@@ -36,10 +36,11 @@ jobs:
         name: GameInventory.exe
         path: publish/GameInventory.exe
         
-    - name: Make Release
+    - name: Create Release
+      id: create_release
       uses: actions/create-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        files: publish/GameInventory.exe
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
