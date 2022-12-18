@@ -33,7 +33,7 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         name: GameInventory.exe
-        path: publish/GIDOCS.exe
+        path: GIDOCS.exe
     
     - name: Create Release
       id: create_release
